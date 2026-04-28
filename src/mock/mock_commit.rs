@@ -1,4 +1,3 @@
-#[cfg(test)]
 pub mod commit {
     use crate::Commit;
     use chrono::DateTime;

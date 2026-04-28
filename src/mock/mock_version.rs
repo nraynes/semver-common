@@ -1,6 +1,5 @@
-#[cfg(test)]
 pub mod version {
-    use crate::{Version, tests::mock};
+    use crate::{Version, mock};
 
     pub fn create() -> Version {
         let (major, minor, patch) = Version::parse("v1.9.2").unwrap();

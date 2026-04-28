@@ -33,7 +33,7 @@ impl Change {
 mod test {
     use serde_json::{Value, json};
 
-    use crate::{Change, tests::mock};
+    use crate::{Change, mock};
 
     #[test]
     fn test_change_new_valid() {

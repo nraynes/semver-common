@@ -56,7 +56,7 @@ impl CommitMap {
 
 #[cfg(test)]
 mod test {
-    use crate::tests::mock;
+    use crate::mock;
 
     use super::*;
 

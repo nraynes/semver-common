@@ -1,4 +1,3 @@
-#[cfg(test)]
 pub mod change {
     use crate::Change;
     use serde_json::json;

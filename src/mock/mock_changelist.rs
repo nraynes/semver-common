@@ -1,6 +1,5 @@
-#[cfg(test)]
 pub mod changelist {
-    use crate::{ChangeList, tests::mock};
+    use crate::{ChangeList, mock};
 
     pub fn major() -> ChangeList {
         ChangeList::new(vec![mock::change::create(

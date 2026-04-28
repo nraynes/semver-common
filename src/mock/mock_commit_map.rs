@@ -1,6 +1,5 @@
-#[cfg(test)]
 pub mod commit_map {
-    use crate::{CommitMap, tests::mock};
+    use crate::{CommitMap, mock};
 
     pub fn create() -> CommitMap {
         let mut commit_map = CommitMap::new();

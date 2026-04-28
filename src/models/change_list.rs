@@ -38,7 +38,7 @@ impl ChangeList {
 
 #[cfg(test)]
 mod test {
-    use crate::tests::mock;
+    use crate::mock;
 
     #[test]
     fn test_changelist_check_pattern_match_one() {
