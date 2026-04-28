@@ -1,6 +1,6 @@
-# Version: v0.5.7
+# Version: v0.5.8
 
 ## Patches
 
-- fix: test debug again
+- fix: added alternate time format
 
