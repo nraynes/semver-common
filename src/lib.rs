@@ -1,4 +1,4 @@
-mod mock;
+pub mod mock;
 mod models;
 
 pub use models::Alert;
