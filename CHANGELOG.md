@@ -1,10 +1,6 @@
-# Version: v0.5.6
+# Version: v0.5.7
 
 ## Patches
 
-- fix: test debug
-
-## Maintenance Items
-
-- chore: updated release workflow
+- fix: test debug again
 
