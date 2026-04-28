@@ -1,4 +1,8 @@
-# Version: v0.5.5
+# Version: v0.5.6
+
+## Patches
+
+- fix: test debug
 
 ## Maintenance Items
 
