@@ -1,6 +1,6 @@
-# Version: v0.5.4
+# Version: v0.5.5
 
-## Features
+## Patches
 
-- feat: added plugin config
+- fix: removed plugin config
 
