@@ -1,6 +1,6 @@
-# Version: v0.2.3
+# Version: v0.3.3
 
-## Patches
+## Features
 
-- fix: added short string to version
+- feat: added logger to run command
 
