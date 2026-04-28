@@ -4,6 +4,7 @@ mod change_list;
 mod commit;
 mod commit_bucket;
 mod commit_map;
+mod plugin_config;
 mod version;
 
 pub use alert::Alert;
@@ -12,4 +13,5 @@ pub use change_list::ChangeList;
 pub use commit::Commit;
 pub use commit_bucket::CommitBucket;
 pub use commit_map::CommitMap;
+pub use plugin_config::PluginConfig;
 pub use version::Version;
