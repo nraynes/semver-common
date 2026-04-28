@@ -4,7 +4,7 @@ use derive_getters::Getters;
 use serde::{Deserialize, Deserializer, Serialize, Serializer};
 use std::fmt::{self, Display, Formatter};
 
-const COMMIT_TIME_FORMAT: &str = "%a %b %d %H:%M:%S %Y %z";
+static COMMIT_TIME_FORMAT: &str = "%a %b %d %H:%M:%S %Y %z";
 
 mod datetime_ser {
     use serde::de;
