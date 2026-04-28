@@ -4,6 +4,8 @@
 # formatting and stages any changed files, as well as automatic doc 
 # generation and testing.
 
+git pull
+
 # Function to check if an element is present in an array.
 has_element() {
     local e
