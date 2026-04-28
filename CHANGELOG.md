@@ -1,6 +1,10 @@
-# Version: v0.3.3
+# Version: v0.4.3
 
 ## Features
 
-- feat: added logger to run command
+- feat: added full command and args to debug log for command runner
+
+## Maintenance Items
+
+- chore: updated version
 
