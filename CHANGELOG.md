@@ -1,6 +1,6 @@
-# Version: v0.6.8
+# Version: v0.6.9
 
-## Features
+## Patches
 
-- feat: added git methods
+- fix: fixed debug logs
 
