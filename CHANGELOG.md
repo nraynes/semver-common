@@ -1,6 +1,6 @@
-# Version: v0.5.8
+# Version: v0.6.8
 
-## Patches
+## Features
 
-- fix: added alternate time format
+- feat: added git methods
 
