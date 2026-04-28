@@ -22,11 +22,14 @@ mod datetime_ser {
     where
         D: Deserializer<'de>,
     {
+        println!("Begin deserialize");
         let s = String::deserialize(deserializer)?;
+        println!("{}", s);
         let dt = match DateTime::parse_from_str(&s, COMMIT_TIME_FORMAT) {
             Ok(v) => v,
             Err(e) => return Err(de::Error::custom(e.to_string())),
         };
+        println!("After datetime");
         Ok(dt)
     }
 }
