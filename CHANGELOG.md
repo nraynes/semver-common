@@ -1,10 +1,6 @@
-# Version: v0.6.10
+# Version: v0.7.0
 
-## Patches
+## Features
 
-- fix: updated config
-
-## Maintenance Items
-
-- chore: updated release bin
+- feat: added readme
 
