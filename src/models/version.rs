@@ -24,6 +24,11 @@ impl Version {
         format!("v{}.{}.{}", self.major, self.minor, self.patch)
     }
 
+    /// Gets the version in short string form. Formatted, "(major).(minor).(patch)"
+    pub fn short(&self) -> String {
+        format!("{}.{}.{}", self.major, self.minor, self.patch)
+    }
+
     /// Parse a string into the appropriate version numbers. Returns a tuple containing
     /// the major, minor, and patch version numbers extracted from the string, if available.
     pub fn parse(version: &str) -> Option<(u32, u32, u32)> {
