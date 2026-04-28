@@ -5,6 +5,7 @@ use serde::{Deserialize, Deserializer, Serialize, Serializer};
 use std::fmt::{self, Display, Formatter};
 
 static COMMIT_TIME_FORMAT: &str = "%a %b %d %H:%M:%S %Y %z";
+static ALTERNATE_TIME_FORMAT: &str = "%Y-%m-%d %H:%M:%S %z";
 
 mod datetime_ser {
     use serde::de;
@@ -22,14 +23,14 @@ mod datetime_ser {
     where
         D: Deserializer<'de>,
     {
-        println!("Begin deserialize");
         let s = String::deserialize(deserializer)?;
-        println!("{}", s);
         let dt = match DateTime::parse_from_str(&s, COMMIT_TIME_FORMAT) {
             Ok(v) => v,
-            Err(e) => return Err(de::Error::custom(e.to_string())),
+            Err(_) => match DateTime::parse_from_str(&s, ALTERNATE_TIME_FORMAT) {
+                Ok(v) => v,
+                Err(e) => return Err(de::Error::custom(e.to_string())),
+            },
         };
-        println!("After datetime");
         Ok(dt)
     }
 }
