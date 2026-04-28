@@ -1,6 +1,6 @@
 # Version: v0.6.9
 
-## Patches
+## Maintenance Items
 
-- fix: fixed debug logs
+- chore: updated release bin
 
