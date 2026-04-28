@@ -1,4 +1,8 @@
-# Version: v0.6.9
+# Version: v0.6.10
+
+## Patches
+
+- fix: updated config
 
 ## Maintenance Items
 
