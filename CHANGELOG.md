@@ -1,10 +1,6 @@
-# Version: v0.4.3
+# Version: v0.4.4
 
-## Features
+## Patches
 
-- feat: added full command and args to debug log for command runner
-
-## Maintenance Items
-
-- chore: updated version
+- fix: fixed debug message
 
