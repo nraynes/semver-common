@@ -1,6 +1,6 @@
-# Version: v0.4.4
+# Version: v0.5.4
 
-## Patches
+## Features
 
-- fix: fixed debug message
+- feat: added plugin config
 
