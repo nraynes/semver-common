@@ -17,15 +17,12 @@ where
     let stdout = String::from_utf8(output.stdout)?;
     let stderr = String::from_utf8(output.stderr)?;
     let status = output.status.code().ok_or(&stderr)?;
-
-    if status == 0 {
-        if let Some(l) = logger {
-            l.debug(&format!("{}\n {}", log_message, stdout));
-        }
-        return Ok(stdout);
-    }
     if let Some(l) = logger {
-        l.debug(&format!("{}\n {}", log_message, stderr));
+        l.debug(&format!("-- stdout -- \n{}\n {}", log_message, stdout));
+        l.debug(&format!("-- stderr -- \n{}\n {}", log_message, stderr));
+    }
+    if status == 0 {
+        return Ok(stdout);
     }
     Err(Alert::from(stderr))
 }
