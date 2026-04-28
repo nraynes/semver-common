@@ -1,0 +1,12 @@
+[package]
+name = "semver-common"
+version = "0.1.0"
+edition = "2024"
+authors = ["Nicholas Raynes"]
+description = "Common library to use for semantic release core and plugins."
+license  = "MIT"
+repository = "https://github.com/nraynes/semver-common"
+keywords = ["semver", "common", "semantic", "project", "tools"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
