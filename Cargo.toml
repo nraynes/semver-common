@@ -1,6 +1,6 @@
 [package]
 name = "semver-common"
-version = "0.2.3"
+version = "0.3.3"
 edition = "2024"
 authors = ["Nicholas Raynes"]
 description = "Common library to use for semantic release core and plugins."
@@ -12,6 +12,7 @@ categories = ["command-line-utilities", "development-tools"]
 [dependencies]
 chrono = "0.4.44"
 derive-getters = "0.5.0"
+r_log = "0.2.2"
 regex = "1.12.3"
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = "1.0.149"
