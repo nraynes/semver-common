@@ -1,6 +1,6 @@
-# Version: v0.1.1
+# Version: v0.1.2
 
 ## Patches
 
-- fix: made mock public
+- fix: moved all mock objects to public re-export
 
