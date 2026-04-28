@@ -20,12 +20,12 @@ where
 
     if status == 0 {
         if let Some(l) = logger {
-            l.debug(&format!("{} {}\n", log_message, stdout));
+            l.debug(&format!("{}\n {}", log_message, stdout));
         }
         return Ok(stdout);
     }
     if let Some(l) = logger {
-        l.debug(&format!("{} {}\n", log_message, stderr));
+        l.debug(&format!("{}\n {}", log_message, stderr));
     }
     Err(Alert::from(stderr))
 }
