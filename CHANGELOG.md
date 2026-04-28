@@ -1,6 +1,6 @@
 # Version: v0.5.5
 
-## Patches
+## Maintenance Items
 
-- fix: removed plugin config
+- chore: updated release workflow
 
