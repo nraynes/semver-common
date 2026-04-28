@@ -1,6 +1,6 @@
 # Version: v0.1.2
 
-## Patches
+## Maintenance Items
 
-- fix: moved all mock objects to public re-export
+- chore: updated version
 
