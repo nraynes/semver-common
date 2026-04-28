@@ -115,7 +115,7 @@ impl Commit {
     /// # Example:
     ///
     /// ```
-    /// use semver_release::Commit;
+    /// use semver_common::Commit;
     /// use chrono::DateTime;
     ///
     /// let c = String::from(
