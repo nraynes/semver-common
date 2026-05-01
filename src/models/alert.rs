@@ -7,7 +7,7 @@ use std::{
 
 /// Alert is a wrapper for all the various error types that may be returned by various
 /// crate functions.
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub struct Alert {
     val: String,
 }
