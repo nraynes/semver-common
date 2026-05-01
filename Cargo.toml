@@ -1,6 +1,6 @@
 [package]
 name = "semver-common"
-version = "0.7.0"
+version = "0.8.0"
 edition = "2024"
 authors = ["Nicholas Raynes"]
 description = "Common library to use for semantic release core and plugins."
