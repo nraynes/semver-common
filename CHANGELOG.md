@@ -1,6 +1,10 @@
-# Version: v0.8.0
+# Version: v0.9.0
 
 ## Features
 
-- feat: added partial eq to alert
+- feat: added licenses rules and updated alert
+
+## Maintenance Items
+
+- chore: fixed permissions
 
