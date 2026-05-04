@@ -1,9 +1,10 @@
 use chrono::ParseError;
 use regex::Error as RegexError;
-use serde_json::Error as SerdeError;
+use serde_json::Error as SerdeJsonError;
 use std::{
     convert::From, fmt::Display, io::Error as IOError, num::ParseIntError, string::FromUtf8Error,
 };
+use yaml_serde::Error as SerdeYamlError;
 
 /// Alert is a wrapper for all the various error types that may be returned by various
 /// crate functions.
@@ -48,11 +49,20 @@ impl From<ParseIntError> for Alert {
     }
 }
 
-impl From<SerdeError> for Alert {
+impl From<SerdeJsonError> for Alert {
     /// serde_json::Error
-    fn from(value: SerdeError) -> Self {
+    fn from(value: SerdeJsonError) -> Self {
         Alert {
             val: format!("serde_json::Error: {}", value),
+        }
+    }
+}
+
+impl From<SerdeYamlError> for Alert {
+    /// yaml_serde::Error
+    fn from(value: SerdeYamlError) -> Self {
+        Alert {
+            val: format!("yaml_serde::Error: {}", value),
         }
     }
 }

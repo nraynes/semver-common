@@ -34,3 +34,6 @@ cargo doc
 
 # Run tests
 cargo test
+
+# Check licenses
+cargo deny check licenses
