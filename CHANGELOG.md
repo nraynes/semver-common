@@ -1,4 +1,8 @@
-# Version: v0.9.0
+# Version: v0.9.1
+
+## Patches
+
+- fix: added default none case to auth
 
 ## Maintenance Items
 
