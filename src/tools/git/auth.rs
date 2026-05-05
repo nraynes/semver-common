@@ -9,6 +9,7 @@ use crate::Alert;
 #[derive(Serialize, Deserialize, PartialEq, Debug)]
 pub enum Auth {
     GITHUB,
+    NONE,
 }
 
 impl Auth {
@@ -20,9 +21,10 @@ impl Auth {
         logger: &Logger,
     ) -> Result<(), Alert> {
         match self {
-            Auth::GITHUB => {
+            Self::GITHUB => {
                 github::set_remote(env, logger)?;
             }
+            Self::NONE => {}
         }
         Ok(())
     }
