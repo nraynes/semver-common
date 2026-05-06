@@ -1,6 +1,6 @@
-# Version: v0.9.2
+# Version: v0.9.3
 
 ## Patches
 
-- fix: moved push tags to push function
+- fix: added getters to models
 
