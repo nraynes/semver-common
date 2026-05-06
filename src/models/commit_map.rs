@@ -1,9 +1,10 @@
 use std::{collections::HashMap, fmt::Display};
 
 use crate::{Alert, Change, Commit, CommitBucket};
+use derive_getters::Getters;
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Getters)]
 pub struct CommitMap {
     map: HashMap<String, CommitBucket>,
 }

@@ -1,8 +1,9 @@
 use crate::{Change, Commit};
+use derive_getters::Getters;
 use serde::{Deserialize, Serialize};
 
 /// Represents a list of change formats to use while analyzing commits.
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Getters)]
 pub struct ChangeList {
     changes: Vec<Change>,
 }
