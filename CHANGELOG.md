@@ -1,10 +1,6 @@
-# Version: v0.9.1
+# Version: v0.9.2
 
 ## Patches
 
-- fix: added default none case to auth
-
-## Maintenance Items
-
-- chore: added a bunch of repo tools
+- fix: moved push tags to push function
 
