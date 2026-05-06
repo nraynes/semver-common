@@ -8,6 +8,5 @@ pub fn tag(name: &str, message: &str, logger: &Logger) -> Result<(), Alert> {
         ["tag", "-a", name, "-m", &format!("{} {}", message, name)],
         Some(logger),
     )?;
-    run_command("git", ["push", "--tags"], Some(logger))?;
     Ok(())
 }
