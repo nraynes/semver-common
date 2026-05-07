@@ -10,6 +10,7 @@ keywords = ["semver", "common", "semantic", "project", "tools"]
 categories = ["command-line-utilities", "development-tools"]
 include = [
     "src/",
+    "examples/",
     "Cargo.toml",
     "LICENSES/",
     "LICENSE",
