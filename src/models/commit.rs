@@ -119,7 +119,7 @@ impl Commit {
     /// # Example:
     ///
     /// ```
-    #[doc = include_str!("../../examples/commit_example.rs")]
+    #[doc = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/examples/commit_example.rs"))]
     /// ```
     pub fn new_from_commit(commit: String) -> Result<Self, Alert> {
         let lines: Vec<&str> = commit.split("\n").collect();
