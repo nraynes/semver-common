@@ -1,10 +1,11 @@
-# Version: v0.9.4
+# Version: v0.10.2
 
 ## Patches
 
-- fix: added breaking change commit to map
+- fix: fixed include doc
+- fix: fixing include_str reference
 
 ## Maintenance Items
 
-- chore: removed unnecessary getter
+- chore: updated release
 
