@@ -3,14 +3,22 @@ pub mod commit_map {
 
     pub fn create() -> CommitMap {
         let mut commit_map = CommitMap::new();
+        let change_breaking_change =
+            mock::change::create("^(.|\n)*BREAKING_CHANGE(.|\n)*$", "BREAKING CHANGES", 1);
         let change_feat = mock::change::create("^feat(.|\n)*$", "Feature", 2);
         let change_fix = mock::change::create("^fix(.|\n)*$", "Fix", 3);
         let commit_one = mock::commit::create("feat(scope): a test header");
         let commit_two = mock::commit::create("feat(scope): a test header two");
         let commit_three = mock::commit::create("fix(scope): a test header three");
+        let commit_four = mock::commit::create(
+            "fix(scope): a test header three\n\nBREAKING CHANGE: This is a breaking change.",
+        );
         commit_map.insert(&change_feat, commit_one).unwrap();
         commit_map.insert(&change_feat, commit_two).unwrap();
         commit_map.insert(&change_fix, commit_three).unwrap();
+        commit_map
+            .insert(&change_breaking_change, commit_four)
+            .unwrap();
         commit_map
     }
 }
