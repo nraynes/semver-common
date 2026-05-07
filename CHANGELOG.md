@@ -1,11 +1,8 @@
-# Version: v0.10.2
+# Version: v1.0.0
 
-## Patches
+## BREAKING CHANGES
 
-- fix: fixed include doc
-- fix: fixing include_str reference
-
-## Maintenance Items
-
-- chore: updated release
+- feat: test breaking
+    
+    BREAKING CHANGE: this is a breaking change test
 
