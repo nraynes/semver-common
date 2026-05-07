@@ -1,8 +1,6 @@
 # Version: v1.0.0
 
-## BREAKING CHANGES
+## Maintenance Items
 
-- feat: test breaking
-    
-    BREAKING CHANGE: this is a breaking change test
+- chore: updated release stuff
 
