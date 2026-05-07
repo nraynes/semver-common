@@ -22,7 +22,7 @@ impl Change {
     /// Checks a commit to see if it matches this change pattern.
     pub fn check(&self, commit: &Commit) -> Result<(), Alert> {
         let r = Regex::new(&self.pattern)?;
-        match r.is_match(commit.msg()) {
+        match r.is_match(commit.message()) {
             true => Ok(()),
             false => Err(Alert::from("Pattern did not match")),
         }

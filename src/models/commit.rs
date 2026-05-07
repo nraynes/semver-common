@@ -161,10 +161,6 @@ impl Commit {
         }
         Err(Alert::from("Commit is not valid"))
     }
-
-    pub fn msg(&self) -> &str {
-        &self.message
-    }
 }
 #[cfg(test)]
 mod test {
