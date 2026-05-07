@@ -1,6 +1,10 @@
-# Version: v0.9.3
+# Version: v0.9.4
 
 ## Patches
 
-- fix: added getters to models
+- fix: added breaking change commit to map
+
+## Maintenance Items
+
+- chore: removed unnecessary getter
 
