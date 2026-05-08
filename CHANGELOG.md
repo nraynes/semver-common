@@ -1,6 +1,6 @@
 # Version: v1.2.2
 
-## Patches
+## Maintenance Items
 
-- fix: added type to alert
+- chore: changed reexport statement
 
