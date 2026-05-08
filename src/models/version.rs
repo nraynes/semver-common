@@ -1,4 +1,6 @@
-use crate::CommitMap;
+use std::str::FromStr;
+
+use crate::{Alert, CommitMap};
 use derive_getters::Getters;
 use serde::{Deserialize, Serialize};
 
@@ -15,6 +17,24 @@ pub struct Version {
 impl Default for Version {
     fn default() -> Self {
         Self::new(0, 0, 0, CommitMap::new())
+    }
+}
+
+impl FromStr for Version {
+    type Err = Alert;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        let config: Version = serde_json::from_str(s)?;
+        Ok(config)
+    }
+}
+
+impl<T> From<T> for Version
+where
+    T: ToString,
+{
+    fn from(value: T) -> Self {
+        Self::from_str(&value.to_string()).unwrap()
     }
 }
 
