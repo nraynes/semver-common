@@ -2,7 +2,8 @@ use chrono::ParseError;
 use regex::Error as RegexError;
 use serde_json::Error as SerdeJsonError;
 use std::{
-    convert::From, fmt::Display, io::Error as IOError, num::ParseIntError, string::FromUtf8Error,
+    convert::From, fmt::Display, io::Error as IOError, num::ParseIntError, str::ParseBoolError,
+    string::FromUtf8Error,
 };
 use yaml_serde::Error as SerdeYamlError;
 
@@ -18,6 +19,15 @@ impl From<ParseError> for Alert {
     fn from(value: ParseError) -> Self {
         Alert {
             val: format!("chrono::ParseError: {}", value),
+        }
+    }
+}
+
+impl From<ParseBoolError> for Alert {
+    /// str::ParseBoolError
+    fn from(value: ParseBoolError) -> Self {
+        Alert {
+            val: format!("str::ParseBoolError: {}", value),
         }
     }
 }
