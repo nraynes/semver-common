@@ -4,7 +4,7 @@ use crate::{Alert, Change, Commit, CommitBucket};
 use derive_getters::Getters;
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize, Getters)]
+#[derive(Serialize, Deserialize, Getters, Clone)]
 pub struct CommitMap {
     map: HashMap<String, CommitBucket>,
 }

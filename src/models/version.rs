@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 
 /// Data structure that contains a version with a major, minor, and patch number as well as a map
 /// of commits that represent changes since the previous version.
-#[derive(Serialize, Deserialize, Getters)]
+#[derive(Serialize, Deserialize, Getters, Clone)]
 pub struct Version {
     major: u32,
     minor: u32,
