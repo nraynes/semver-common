@@ -1,6 +1,6 @@
-# Version: v1.2.1
+# Version: v1.2.2
 
 ## Patches
 
-- fix: updated dependency
+- fix: added type to alert
 
