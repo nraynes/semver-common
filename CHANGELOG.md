@@ -1,6 +1,6 @@
-# Version: v1.2.0
+# Version: v1.2.1
 
-## Features
+## Patches
 
-- feat: added fromstr implementation on version
+- fix: updated dependency
 
