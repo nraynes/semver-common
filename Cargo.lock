@@ -351,9 +351,9 @@ dependencies = [
 
 [[package]]
 name = "r_log"
-version = "0.3.3"
+version = "0.3.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "82fd732f93320d4a736757307d2f2fd8b1595a31b97973e6c99dcb96a2daea32"
+checksum = "a44d00220f4cbc272b9eeb63a352b5b3a14e9516987242ff0e164b5be6604136"
 dependencies = [
  "clap",
  "serde",
