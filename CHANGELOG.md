@@ -1,4 +1,8 @@
-# Version: v1.2.2
+# Version: v1.2.3
+
+## Patches
+
+- fix: updated logger
 
 ## Maintenance Items
 
