@@ -1,4 +1,4 @@
-# Version: v1.2.3
+# Version: v1.2.4
 
 ## Patches
 
@@ -6,5 +6,5 @@
 
 ## Maintenance Items
 
-- chore: changed reexport statement
+- chore: fixed license spec in cargo toml
 
