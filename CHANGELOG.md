@@ -1,10 +1,6 @@
-# Version: v1.2.4
+# Version: v1.2.5
 
 ## Patches
 
-- fix: updated logger
-
-## Maintenance Items
-
-- chore: fixed license spec in cargo toml
+- fix: changed github authentication
 
