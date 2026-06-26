@@ -1,5 +1,5 @@
 use r_log::Logger;
-use std::{collections::HashMap, fs::File, io::Write};
+use std::{collections::HashMap, fs::File, io::Write, path::PathBuf};
 
 use crate::{Alert, run_command};
 
@@ -18,7 +18,7 @@ pub fn set_remote(env: &HashMap<String, String>, logger: &Logger) -> Result<(), 
         Some(logger),
     )?;
     println!("Creating file...");
-    let mut github_credentials = File::create("~/.git-credentials")?;
+    let mut github_credentials = File::create(PathBuf::from("~/.git-credentials"))?;
     println!("Writing file...");
     github_credentials.write_all(format!("https://${}:${}@github.com", actor, token).as_bytes())?;
     Ok(())
