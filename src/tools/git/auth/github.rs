@@ -17,7 +17,9 @@ pub fn set_remote(env: &HashMap<String, String>, logger: &Logger) -> Result<(), 
         ["config", "--global", "credential.helper", "store"],
         Some(logger),
     )?;
+    println!("Creating file...");
     let mut github_credentials = File::create("~/.git-credentials")?;
+    println!("Writing file...");
     github_credentials.write_all(format!("https://${}:${}@github.com", actor, token).as_bytes())?;
     Ok(())
 }
