@@ -1,4 +1,3 @@
-pub mod auth;
 mod commit_all;
 mod fetch;
 mod get_commits;
