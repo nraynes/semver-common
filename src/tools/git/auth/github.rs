@@ -1,5 +1,5 @@
 use r_log::Logger;
-use std::collections::HashMap;
+use std::{collections::HashMap, fs::File, io::Write};
 
 use crate::{Alert, run_command};
 
@@ -12,23 +12,12 @@ pub fn set_remote(env: &HashMap<String, String>, logger: &Logger) -> Result<(), 
     let token = env
         .get("GITHUB_TOKEN")
         .ok_or("GITHUB_TOKEN not in environment variables.")?;
-    let repo = env
-        .get("GITHUB_REPOSITORY")
-        .ok_or("GITHUB_REPOSITORY not in environment variables.")?;
     run_command(
         "git",
-        [
-            "remote",
-            "set-url",
-            "origin",
-            &format!("https://${}:${}@github.com/{}.git", actor, token, repo),
-        ],
+        ["config", "--global", "credential.helper", "store"],
         Some(logger),
     )?;
-    run_command(
-        "git",
-        ["config", "--global", "user.name", actor],
-        Some(logger),
-    )?;
+    let mut github_credentials = File::create("~/.git-credentials")?;
+    github_credentials.write_all(format!("https://${}:${}@github.com", actor, token).as_bytes())?;
     Ok(())
 }
